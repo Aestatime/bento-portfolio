@@ -31,14 +31,14 @@ const pixelifySans = Pixelify_Sans({
 
 const DESIGN_CARDS = [
   { id: 1, image: "/nightracerOLD.png", xHover: -45, yHover: 20, rotateHover: -12, rotateRest: -5 },
-  { id: 2, image: "/ForeverYoungPNG.png", xHover: 45, yHover: 15, rotateHover: 12, rotateRest: 5 },
-  { id: 3, image: "/AnotherAprilIsGone PNG.png", xHover: 0, yHover: 40, rotateHover: 0, rotateRest: 0, isMain: true },
+  { id: 2, image: "/ForeverYoung.png", xHover: 45, yHover: 15, rotateHover: 12, rotateRest: 5 },
+  { id: 3, image: "/AnotherAprilIsGone.png", xHover: 0, yHover: 40, rotateHover: 0, rotateRest: 0, isMain: true },
 ];
 
 const PHOTO_CARDS = [
   { id: 1, image: "/sunset.jpg", xHover: -40, yHover: 20, rotateHover: -10, rotateRest: -4 },
   { id: 2, image: "/iduladha.jpg", xHover: 40, yHover: 15, rotateHover: 10, rotateRest: 4 },
-  { id: 3, image: "/image_2.jpg", xHover: 0, yHover: 40, rotateHover: 0, rotateRest: 0, isMain: true },
+  { id: 3, image: "/mansion.jpg", xHover: 0, yHover: 40, rotateHover: 0, rotateRest: 0, isMain: true },
 ];
 
   const TABS = [
@@ -95,7 +95,7 @@ export default function Home() {
           {/* BENTO PERTAMA */}
             <div className="box relative overflow-hidden lg:col-span-2 row-span-2 p-5 lg:p-10 rounded-4xl drop-shadow-md">
                     <div className="flex items-start gap-4">
-                            <Image src="/profilePict.jpg" width={120} height={120} alt={"profilePicture"} className="rounded-md select-none" draggable="false" />
+                            <Image src="/profilepict.jpg" width={120} height={120} alt={"profilePicture"} className="rounded-md select-none" draggable="false" />
                         <div className='flex-1 mt-3'>
                             <h2 className={'lg:text-2xl text-zinc-900 font-semibold sm:text-sm ' + pixelifySans.className}>Hello, my name is 'Azmi👋🏻</h2>
                             <p className="text-gray-500 text-sm">(Also Known As Aesta)</p>
