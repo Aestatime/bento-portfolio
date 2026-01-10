@@ -30,7 +30,7 @@ const pixelifySans = Pixelify_Sans({
 // backdrop-blur-md
 
 const DESIGN_CARDS = [
-  { id: 1, image: "/nightracerOLD.png", xHover: -45, yHover: 20, rotateHover: -12, rotateRest: -5 },
+  { id: 1, image: "/NightracerOLD.png", xHover: -45, yHover: 20, rotateHover: -12, rotateRest: -5 },
   { id: 2, image: "/ForeverYoung.png", xHover: 45, yHover: 15, rotateHover: 12, rotateRest: 5 },
   { id: 3, image: "/AnotherAprilIsGone.png", xHover: 0, yHover: 40, rotateHover: 0, rotateRest: 0, isMain: true },
 ];
