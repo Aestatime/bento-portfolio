@@ -45,7 +45,7 @@ const PHOTO_CARDS = [
     {
       label: 'Me',
       icon: <User className='h-5 w-5' />,
-      image: '/foto_azmi1x1.jpg'
+      image: 'foto_azmi1x1.jpg'
     },
     {
       label: 'Girlfriend',
