@@ -30,9 +30,9 @@ const pixelifySans = Pixelify_Sans({
 // backdrop-blur-md
 
 const DESIGN_CARDS = [
-  { id: 1, image: "/NightracerOLD.png", xHover: -45, yHover: 20, rotateHover: -12, rotateRest: -5 },
-  { id: 2, image: "/ForeverYoung.png", xHover: 45, yHover: 15, rotateHover: 12, rotateRest: 5 },
-  { id: 3, image: "/AnotherAprilIsGone.png", xHover: 0, yHover: 40, rotateHover: 0, rotateRest: 0, isMain: true },
+  { id: 1, image: "/racer.png", xHover: -45, yHover: 20, rotateHover: -12, rotateRest: -5 },
+  { id: 2, image: "/young.png", xHover: 45, yHover: 15, rotateHover: 12, rotateRest: 5 },
+  { id: 3, image: "/april.png", xHover: 0, yHover: 40, rotateHover: 0, rotateRest: 0, isMain: true },
 ];
 
 const PHOTO_CARDS = [
@@ -45,17 +45,17 @@ const PHOTO_CARDS = [
     {
       label: 'Me',
       icon: <User className='h-5 w-5' />,
-      image: 'foto_azmi1x1.jpg'
-    },
-    {
-      label: 'Girlfriend',
-      icon: <Heart className="h-5 w-5" />,
-      image: 'foto_della.jpg'
+      image: '/fotoazmi.jpg'
     },
     {
       label: 'Place',
+      icon: <Heart className="h-5 w-5" />,
+      image: '/fotosd.jpg'
+    },
+    {
+      label: 'Jogja',
       icon: <MapPin className="h-5 w-5" />,
-      image: 'foto_sd.jpg'
+      image: '/tugujogja.jpg'
     }
   ];
 
@@ -99,7 +99,7 @@ export default function Home() {
                         <div className='flex-1 mt-3'>
                             <h2 className={'lg:text-2xl text-zinc-900 font-semibold sm:text-sm ' + pixelifySans.className}>Hello, my name is 'Azmi👋🏻</h2>
                             <p className="text-gray-500 text-sm">(Also Known As Aesta)</p>
-                            <p className="text-zinc-800">A graphic designer</p>
+                            <p className="text-zinc-800 text-sm lg:text-md">A graphic designer</p>
                         </div>
                     </div>
                     <div className='flex-1 mt-4 lg:mt-10 space-y-2 text-zinc-800'>
