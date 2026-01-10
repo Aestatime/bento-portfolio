@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import 'leaflet/dist/leaflet.css'
 import { Plus_Jakarta_Sans } from 'next/font/google'
+import Footer from "@/components/widget/footer"
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -36,6 +37,7 @@ export default function RootLayout({
         className={`${plusJakarta.className} antialiased`}
       >
         {children}
+        <Footer />
       </body>
     </html>
   );
