@@ -39,6 +39,11 @@ const photoData = {
   ],
 };
 
+export const metadata = {
+  title: 'Photo Gallery',
+  description: 'My photography collection - horizontal and vertical photos',
+}
+
 export default function PhotoShowcase() {
   const [activeTab, setActiveTab] = useState<'horizontal' | 'vertical'>('horizontal');
 

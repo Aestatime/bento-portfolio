@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import { SlidingNumber } from '@/components/motion-primitives/sliding-number';
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils"; // Fungsi helper tailwind-merge standar shadcn
@@ -37,7 +37,7 @@ const DESIGN_CARDS = [
 
 const PHOTO_CARDS = [
   { id: 1, image: "/sunset.jpg", xHover: -40, yHover: 20, rotateHover: -10, rotateRest: -4 },
-  { id: 2, image: "/iduladha.jpg", xHover: 40, yHover: 15, rotateHover: 10, rotateRest: 4 },
+  { id: 2, image: "/adha.jpg", xHover: 40, yHover: 15, rotateHover: 10, rotateRest: 4 },
   { id: 3, image: "/mansion.jpg", xHover: 0, yHover: 40, rotateHover: 0, rotateRest: 0, isMain: true },
 ];
 
