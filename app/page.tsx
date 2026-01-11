@@ -95,11 +95,11 @@ export default function Home() {
           {/* BENTO PERTAMA */}
             <div className="box relative overflow-hidden lg:col-span-2 row-span-2 p-5 lg:p-10 rounded-4xl drop-shadow-md">
                     <div className="flex items-start gap-4">
-                            <Image src="/profilepict.jpg" width={120} height={120} alt={"profilePicture"} className="rounded-md select-none" draggable="false" />
+                            <Image src="/profilepict.jpg" width={120} height={120} alt={"profilePicture"} className="hidden md:block xl:block rounded-md select-none" draggable="false" />
                         <div className='flex-1 mt-3'>
-                            <h2 className={'lg:text-2xl text-zinc-900 font-semibold sm:text-sm ' + pixelifySans.className}>Hello, my name is 'Azmi👋🏻</h2>
-                            <p className="text-gray-500 text-sm">(Also Known As Aesta)</p>
-                            <p className="text-zinc-800 text-sm lg:text-md">A graphic designer</p>
+                            <h2 className={'text-3xl text-zinc-900 font-semibold ' + pixelifySans.className}>Hello, my name is 'Azmi</h2>
+                            <p className="text-gray-500 mt-2 text-sm">(Also Known As Aesta)</p>
+                            <p className="text-zinc-800 text-sm lg:text-lg">A graphic designer</p>
                         </div>
                     </div>
                     <div className='flex-1 mt-4 lg:mt-10 space-y-2 text-zinc-800'>
@@ -146,7 +146,7 @@ export default function Home() {
                 <path d="M6.017 4.313l55.333 -4.087c6.797 -0.583 8.543 -0.19 12.817 2.917l17.663 12.443c2.913 2.14 3.883 2.723 3.883 5.053v68.243c0 4.277 -1.553 6.807 -6.99 7.193L24.467 99.967c-4.08 0.193 -6.023 -0.39 -8.16 -3.113L3.3 79.94c-2.333 -3.113 -3.3 -5.443 -3.3 -8.167V11.113c0 -3.497 1.553 -6.413 6.017 -6.8z"/>
                 </svg>
                 </div>
-                  <p className={'lg:text-2xl text-zinc-900 font-semibold pt-2 ' + pixelifySans.className}>Notion Template</p>
+                  <p className={'text-3xl text-zinc-900 font-semibold pt-2 ' + pixelifySans.className}>Notion Template</p>
               </div>
                         <div className="flex-1">
                           <p className="text-zinc-800 text-[16px] mt-2">Hey! I also create a Notion template. If you're interested or want to buy the template, you can click the button below to check my store!</p>
