@@ -30,32 +30,32 @@ const pixelifySans = Pixelify_Sans({
 // backdrop-blur-md
 
 const DESIGN_CARDS = [
-  { id: 1, image: "/racer.png", xHover: -45, yHover: 20, rotateHover: -12, rotateRest: -5 },
-  { id: 2, image: "/young.png", xHover: 45, yHover: 15, rotateHover: 12, rotateRest: 5 },
-  { id: 3, image: "/april.png", xHover: 0, yHover: 40, rotateHover: 0, rotateRest: 0, isMain: true },
+  { id: 1, image: "/racer.webp", xHover: -45, yHover: 20, rotateHover: -12, rotateRest: -5 },
+  { id: 2, image: "/young.webp", xHover: 45, yHover: 15, rotateHover: 12, rotateRest: 5 },
+  { id: 3, image: "/april.webp", xHover: 0, yHover: 40, rotateHover: 0, rotateRest: 0, isMain: true },
 ];
 
 const PHOTO_CARDS = [
-  { id: 1, image: "/sunset.jpg", xHover: -40, yHover: 20, rotateHover: -10, rotateRest: -4 },
-  { id: 2, image: "/adha.jpg", xHover: 40, yHover: 15, rotateHover: 10, rotateRest: 4 },
-  { id: 3, image: "/mansion.jpg", xHover: 0, yHover: 40, rotateHover: 0, rotateRest: 0, isMain: true },
+  { id: 1, image: "/sunset.webp", xHover: -40, yHover: 20, rotateHover: -10, rotateRest: -4 },
+  { id: 2, image: "/adha.webp", xHover: 40, yHover: 15, rotateHover: 10, rotateRest: 4 },
+  { id: 3, image: "/mansion.webp", xHover: 0, yHover: 40, rotateHover: 0, rotateRest: 0, isMain: true },
 ];
 
   const TABS = [
     {
       label: 'Me',
       icon: <User className='h-5 w-5' />,
-      image: '/fotoazmi.jpg'
+      image: '/fotoazmi.webp'
     },
     {
       label: 'Place',
       icon: <Heart className="h-5 w-5" />,
-      image: '/fotosd.jpg'
+      image: '/fotosd.webp'
     },
     {
       label: 'Jogja',
       icon: <MapPin className="h-5 w-5" />,
-      image: '/tugujogja.jpg'
+      image: '/tugujogja.webp'
     }
   ];
 
@@ -91,7 +91,7 @@ export default function Home() {
     <main>
       <div className="py-10 px-6 sm:px-8 md:px-12 lg:px-45">
         {/* BENTO BOX */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 grid-rows-3 gap-5">
+        <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 grid-rows-3 gap-5">
           {/* BENTO PERTAMA */}
             <div className="box relative overflow-hidden lg:col-span-2 row-span-2 p-5 lg:p-10 rounded-4xl drop-shadow-md">
                     <div className="flex items-start gap-4">

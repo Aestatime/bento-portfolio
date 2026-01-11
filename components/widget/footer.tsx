@@ -92,8 +92,7 @@ export default function Footer() {
   }, []);
 
   return (
-    <div className="flex gap-4 lg:px-45 mb-5">
-      <span className="text-sm text-gray-500">Current Status: </span>
+    <div className="flex gap-4 px-6 sm:px-8 md:px-12 lg:px-45 mb-5">
       <div className="flex items-center gap-2">
         <div className="relative">
           {/* Dot dengan glowing & blinking effect */}

@@ -82,8 +82,9 @@ className={`relative w-full h-64 ${isWide ? 'md:h-80 lg:h-96' : 'md:h-64 lg:h-72
             <Image 
               src={card.image} 
               alt="work" 
-              fill 
               className="object-cover"
+              width={1500}
+              height={1500}
               draggable={false}
             />
             <div className="absolute inset-0 bg-linear-to-t from-black/30 to-transparent z-10" />
