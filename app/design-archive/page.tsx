@@ -2,6 +2,31 @@
 import React, { useState } from 'react';
 import { Palette, Briefcase, Users, Trophy } from 'lucide-react';
 
+function OptimizedImage({ src, alt }: { src: string; alt: string }) {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  return (
+    <div className="relative">
+      {/* Skeleton loader */}
+      {!isLoaded && (
+        <div className="absolute inset-0 bg-gray-200 animate-pulse rounded" />
+      )}
+      
+      {/* Actual image */}
+      <img
+        src={src}
+        alt={alt}
+        loading="lazy"
+        decoding="async"
+        className={`w-full h-auto object-cover transition-all duration-500 ${
+          isLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+        } group-hover:scale-105`}
+        onLoad={() => setIsLoaded(true)}
+      />
+    </div>
+  );
+}
+
 // Data desain dari folder lokal
 interface Design {
   id: number;
@@ -76,7 +101,7 @@ const designData: Record<string, Design[]> = {
     { id: 2, url: '/img/basketball/poster-2.png', title: 'Game Day Poster', category: 'Poster' },
     { id: 3, url: '/img/basketball/poster-3.png', title: 'Game Day Poster', category: 'Poster' },
     { id: 4, url: '/img/basketball/poster-4.png', title: 'Game Day Poster', category: 'Poster' },
-    { id: 5, url: '/img/basketball/poster-5.png', title: 'Game Day Poster', category: 'Poster' },
+    { id: 5, url: '/img/basketball/poster-5.png', title: 'Roster Team Poster', category: 'Poster' },
   ],
 };
 
@@ -168,12 +193,11 @@ export default function DesignShowcase() {
               key={design.id}
               className="group relative bg-white rounded-xl sm:rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer break-inside-avoid mb-4 sm:mb-5 md:mb-6"
             >
-              {/* Container menyesuaikan ukuran gambar - Full Flexible */}
+              {/* Container menyesuaikan ukuran gambar - Full Flexible with Optimized Loading */}
               <div className="relative">
-                <img
+                <OptimizedImage 
                   src={design.url}
                   alt={design.title}
-                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">

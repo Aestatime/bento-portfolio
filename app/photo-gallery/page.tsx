@@ -2,7 +2,31 @@
 import React, { useState } from 'react';
 import { Camera } from 'lucide-react';
 
-// Data foto dari folder lokal
+function OptimizedImage({ src, alt }: { src: string; alt: string }) {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  return (
+    <div className="relative">
+      {/* Skeleton loader */}
+      {!isLoaded && (
+        <div className="absolute inset-0 bg-gray-200 animate-pulse rounded" />
+      )}
+      
+      {/* Actual image */}
+      <img
+        src={src}
+        alt={alt}
+        loading="lazy"
+        decoding="async"
+        className={`w-full h-auto object-cover transition-opacity duration-300 ${
+          isLoaded ? 'opacity-100' : 'opacity-0'
+        }`}
+        onLoad={() => setIsLoaded(true)}
+      />
+    </div>
+  );
+}
+
 type Photo = {
   id: number;
   url: string;
@@ -107,27 +131,22 @@ export default function PhotoShowcase() {
           </div>
         </div>
 
-        {/* Photo Grid */}
-        <div className={`grid gap-3 sm:gap-4 ${
-          activeTab === 'horizontal' 
-            ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3' 
-            : 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-4'
-        }`}>
-          {currentPhotos.map((photo: Photo) => (
+        {/* Photo Grid - Masonry Style (Flexible Heights) */}
+        <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-3 sm:gap-4 space-y-3 sm:space-y-4">
+          {currentPhotos.map((photo) => (
             <div
               key={photo.id}
-              className="group relative bg-white rounded-xl sm:rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer"
+              className="group relative bg-white rounded-xl sm:rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer break-inside-avoid mb-3 sm:mb-4"
             >
-              <div className={`relative ${
-                activeTab === 'horizontal' ? 'aspect-16/10' : 'aspect-3/4'
-              }`}>
+              {/* Container menyesuaikan ukuran gambar - Full Flexible */}
+              <div className="relative">
                 <img
                   src={photo.url}
                   alt={photo.title}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 linear-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4">
                     <h3 className="text-white font-semibold text-sm sm:text-base">{photo.title}</h3>
                   </div>
