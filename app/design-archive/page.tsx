@@ -66,7 +66,7 @@ const designData: Record<string, Design[]> = {
     { id: 27, url: '/img/personal/poster-27.png', title: 'MOEHA', category: 'Poster' },
   ],
   ipm: [
-    { id: 1, url: '/img/ipm/poster-1.png', title: 'Teacher Day Poster', category: 'Poster' },
+    { id: 1, url: '/img/ipm/poster-1.PNG', title: 'Teacher Day Poster', category: 'Poster' },
     { id: 2, url: '/img/ipm/poster-2.png', title: 'EID Poster', category: 'Poster' },
     { id: 3, url: '/img/ipm/poster-3.png', title: 'Logo Kewirahusahaan', category: 'Logo' },
     { id: 4, url: '/img/ipm/poster-4.png', title: 'Posni Certificate', category: 'Certificate' },
