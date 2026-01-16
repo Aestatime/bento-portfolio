@@ -95,7 +95,7 @@ export default function Home() {
           {/* BENTO PERTAMA */}
             <div className="box relative overflow-hidden lg:col-span-2 row-span-2 p-5 lg:p-10 rounded-4xl drop-shadow-md">
                     <div className="flex items-start gap-4">
-                            <Image src="/profilepict.jpg" width={120} height={120} alt={"profilePicture"} className="hidden md:block xl:block rounded-md select-none" draggable="false" />
+                            <Image src="/profilepict.webp" width={120} height={120} alt={"profilePicture"} className="hidden md:block xl:block rounded-md select-none" draggable="false" />
                         <div className='flex-1 mt-3'>
                             <h2 className={'text-3xl text-zinc-900 font-semibold ' + pixelifySans.className}>Hello, my name is 'Azmi</h2>
                             <p className="text-gray-500 mt-2 text-sm">(Also Known As Aesta)</p>
